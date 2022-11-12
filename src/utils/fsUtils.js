@@ -9,9 +9,17 @@ const readMissionsData = async () => {
   }
 };
 
-const writeMissionsData = async (data) => {
+const writeNewMissionData = async (data) => {
   try {
-    await fs.writeFile('./data/missions.json', JSON.stringify(data));
+    const missions = await readMissionsData();
+    const lastMissionId = missions[missions.length - 1].id;
+    const newMission = {
+      id: lastMissionId + 1,
+      ...data,
+    };
+    const newMissions = [...missions, newMission];
+
+    await fs.writeFile('./data/missions.json', JSON.stringify(newMissions));
   } catch (err) {
     console.error(err);
   }
@@ -19,5 +27,5 @@ const writeMissionsData = async (data) => {
 
 module.exports = {
   readMissionsData,
-  writeMissionsData,
+  writeNewMissionData,
 };
