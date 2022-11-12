@@ -26,5 +26,40 @@
     "description": "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
     "distance": "1.6 bil. km",
     "travel": "7 years"
+  },
+  {
+    "id": 5,
+    "name": "Venus",
+    "description": "The hottest planet in our solar system, Venus is a great place to visit if you’re looking for a bit of a tan. Just don’t forget your sunscreen!",
+    "distance": "108 mil. km",
+    "travel": "6 months"
+  },
+  {
+    "id": 6,
+    "name": "Mercury",
+    "description": "The closest planet to the Sun, Mercury is a great place to visit if you’re looking for a bit of a tan. Just don’t forget your sunscreen!",
+    "distance": "57 mil. km",
+    "travel": "3 months"
+  },
+  {
+    "id": 7,
+    "name": "Pluto",
+    "description": "Pluto is a great place to visit if you’re looking for a bit of a tan. Just don’t forget your sunscreen!",
+    "distance": "5 bil. km",
+    "travel": "20 years"
+  },
+  {
+    "id": 8,
+    "name": "Mission X",
+    "description": "Mission X description",
+    "distance": "1 billion light years",
+    "travel": "1 billion years"
+  },
+  {
+    "id": 9,
+    "name": "Mission Y",
+    "description": "This mission are going to Planet Y",
+    "distance": "Y light years",
+    "travel": "Y milion years"
   }
 ]
