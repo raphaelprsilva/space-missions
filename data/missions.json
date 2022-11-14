@@ -47,26 +47,5 @@
     "description": "Pluto is a great place to visit if you’re looking for a bit of a tan. Just don’t forget your sunscreen!",
     "distance": "5 bil. km",
     "travel": "20 years"
-  },
-  {
-    "id": 8,
-    "name": "Mission X",
-    "description": "Mission X description",
-    "distance": "1 billion light years",
-    "travel": "1 billion years"
-  },
-  {
-    "id": 9,
-    "name": "Mission Y",
-    "description": "This mission are going to Planet Y",
-    "distance": "Y light years",
-    "travel": "Y milion years"
-  },
-  {
-    "id": 10,
-    "name": "Mission A",
-    "description": "This mission are going to planet A",
-    "distance": "A light years",
-    "travel": "A years"
   }
 ]

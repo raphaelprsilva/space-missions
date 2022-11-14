@@ -3,6 +3,7 @@ const {
   readMissionsData,
   writeNewMissionData,
   updateMissionData,
+  deleteMissionData,
 } = require('./utils/fsUtils');
 
 const app = express();
@@ -39,6 +40,13 @@ app.put('/missions/:id', async (request, response) => {
   });
 
   return response.status(201).json({ mission });
+});
+
+app.delete('/missions/:id', async (request, response) => {
+  const { id } = request.params;
+  const mission = await deleteMissionData(id);
+
+  return response.status(204).json({ message: mission.message });
 });
 
 module.exports = app;

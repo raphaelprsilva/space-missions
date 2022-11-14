@@ -46,8 +46,27 @@ const updateMissionData = async (id, newMissionData) => {
   }
 };
 
+const deleteMissionData = async (id) => {
+  try {
+    const missions = await readMissionsData();
+    const newMissions = missions.filter((mission) => mission.id !== Number(id));
+
+    if (newMissions.length === missions.length) {
+      throw new Error('Mission not found');
+    }
+
+    await fs.writeFile('./data/missions.json', JSON.stringify(newMissions));
+    return {
+      message: `Mission with id ${id} was deleted`,
+    };
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 module.exports = {
   readMissionsData,
   writeNewMissionData,
   updateMissionData,
+  deleteMissionData,
 };
