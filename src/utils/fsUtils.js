@@ -20,6 +20,7 @@ const writeNewMissionData = async (data) => {
     const newMissions = [...missions, newMission];
 
     await fs.writeFile('./data/missions.json', JSON.stringify(newMissions));
+    return newMission;
   } catch (err) {
     console.error(err);
   }
