@@ -64,9 +64,9 @@
   },
   {
     "id": 10,
-    "name": "Mission Z",
-    "description": "This mission are going to planet Z",
-    "distance": "Z light years",
-    "travel": "Z years"
+    "name": "Mission A",
+    "description": "This mission are going to planet A",
+    "distance": "A light years",
+    "travel": "A years"
   }
 ]

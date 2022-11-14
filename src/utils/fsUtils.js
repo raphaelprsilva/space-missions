@@ -26,7 +26,28 @@ const writeNewMissionData = async (data) => {
   }
 };
 
+const updateMissionData = async (id, newMissionData) => {
+  try {
+    const updatedMission = { id: Number(id), ...newMissionData };
+    const missions = await readMissionsData();
+    const newMissions = missions.map((mission) => {
+      if (mission.id === Number(id)) {
+        return {
+          ...mission,
+          ...newMissionData,
+        };
+      }
+      return mission;
+    });
+    await fs.writeFile('./data/missions.json', JSON.stringify(newMissions));
+    return updatedMission;
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 module.exports = {
   readMissionsData,
   writeNewMissionData,
+  updateMissionData,
 };

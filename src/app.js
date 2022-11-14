@@ -1,5 +1,9 @@
 const express = require('express');
-const { readMissionsData, writeNewMissionData } = require('./utils/fsUtils');
+const {
+  readMissionsData,
+  writeNewMissionData,
+  updateMissionData,
+} = require('./utils/fsUtils');
 
 const app = express();
 
@@ -21,6 +25,20 @@ app.post('/missions', async (request, response) => {
   });
 
   return response.json({ mission: newMission });
+});
+
+app.put('/missions/:id', async (request, response) => {
+  const { id } = request.params;
+  const { name, description, distance, travel } = request.body;
+
+  const mission = await updateMissionData(id, {
+    name,
+    description,
+    distance,
+    travel,
+  });
+
+  return response.status(201).json({ mission });
 });
 
 module.exports = app;
